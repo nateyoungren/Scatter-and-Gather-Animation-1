@@ -12,6 +12,8 @@
 		776ECC27220B77B3000CCFAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776ECC25220B77B3000CCFAA /* Main.storyboard */; };
 		776ECC29220B77B3000CCFAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776ECC28220B77B3000CCFAA /* Assets.xcassets */; };
 		776ECC2C220B77B3000CCFAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776ECC2A220B77B3000CCFAA /* LaunchScreen.storyboard */; };
+		776ECC36220B7990000CCFAA /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776ECC35220B7990000CCFAA /* AppearanceHelper.swift */; };
+		776ECC38220B79F4000CCFAA /* Ynsect Moksha.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 776ECC37220B79F4000CCFAA /* Ynsect Moksha.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		776ECC28220B77B3000CCFAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776ECC2B220B77B3000CCFAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776ECC2D220B77B3000CCFAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776ECC35220B7990000CCFAA /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
+		776ECC37220B79F4000CCFAA /* Ynsect Moksha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ynsect Moksha.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				776ECC28220B77B3000CCFAA /* Assets.xcassets */,
 				776ECC2A220B77B3000CCFAA /* LaunchScreen.storyboard */,
 				776ECC2D220B77B3000CCFAA /* Info.plist */,
+				776ECC35220B7990000CCFAA /* AppearanceHelper.swift */,
+				776ECC37220B79F4000CCFAA /* Ynsect Moksha.ttf */,
 			);
 			path = ScatterGather;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				776ECC2C220B77B3000CCFAA /* LaunchScreen.storyboard in Resources */,
 				776ECC29220B77B3000CCFAA /* Assets.xcassets in Resources */,
+				776ECC38220B79F4000CCFAA /* Ynsect Moksha.ttf in Resources */,
 				776ECC27220B77B3000CCFAA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			files = (
 				776ECC24220B77B3000CCFAA /* ViewController.swift in Sources */,
 				776ECC22220B77B3000CCFAA /* AppDelegate.swift in Sources */,
+				776ECC36220B7990000CCFAA /* AppearanceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

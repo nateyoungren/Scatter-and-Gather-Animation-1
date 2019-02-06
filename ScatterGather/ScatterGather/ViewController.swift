@@ -72,8 +72,10 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2) {
             
             for label in self.labels {
+                let minX = self.view.frame.origin.x - label.frame.origin.x
+                let maxX = self.view.frame.maxX - label.frame.origin.x
                 var t = CGAffineTransform.identity
-                t = t.translatedBy(x: CGFloat.random(in: -self.view.bounds.maxX...self.view.bounds.maxX), y: (CGFloat.random(in: 0...self.view.bounds.maxY)))
+                t = t.translatedBy(x: CGFloat.random(in: minX...maxX), y: (CGFloat.random(in: 0...self.view.frame.maxY)))
                 t = t.scaledBy(x: 1.5, y: 1.5)
                 t = t.rotated(by: CGFloat.pi)
                 label.transform = t
@@ -92,7 +94,7 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 2) {
             for label in self.labels {
                 label.transform = CGAffineTransform.identity
-                label.backgroundColor = .white
+                label.backgroundColor = .clear
                 label.textColor = .black
             }
             self.lambdaLogoImageView.alpha = 1

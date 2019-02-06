@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         }
         
         let lambdaLogo = UIImage(named: "Lambda_Logo_Full")
-        let lambdaLogoImageView = UIImageView(image: lambdaLogo)
+        lambdaLogoImageView.image = lambdaLogo
         lambdaLogoImageView.translatesAutoresizingMaskIntoConstraints = false
         fullStack.addArrangedSubview(lambdaLogoImageView)
         
@@ -65,9 +65,43 @@ class ViewController: UIViewController {
         
     }
     
+    func scatter() {
+        
+        UIView.animate(withDuration: 2) {
+            
+            for label in self.labels {
+                var t = CGAffineTransform.identity
+                t = t.rotated(by: CGFloat.pi)
+                t = t.scaledBy(x: 1.5, y: 1.5)
+                t = t.translatedBy(x: CGFloat.random(in: 0...self.view.frame.maxX), y: CGFloat.random(in: 0...self.view.frame.maxY))
+                label.transform = t
+                label.backgroundColor = UIColor(red: CGFloat.random(in: 0...255)/255, green: CGFloat.random(in: 0...255)/255, blue: CGFloat.random(in: 0...255)/255, alpha: 1)
+            }
+            
+            self.lambdaLogoImageView.alpha = 0
+            
+        }
+        
+    }
+    
+    func gather() {
+        
+        UIView.animate(withDuration: 2) {
+            
+            for label in self.labels {
+                label.transform = CGAffineTransform.identity
+            }
+            
+            self.lambdaLogoImageView.alpha = 1
+            
+        }
+        
+    }
+    
     var shouldScramble: Bool = true
     var labels: [UILabel] = []
     let lambda = "Lambda"
+    let lambdaLogoImageView = UIImageView()
     
 }
 

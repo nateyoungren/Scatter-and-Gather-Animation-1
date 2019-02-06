@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     @IBAction func toggle(_ sender: UIBarButtonItem) {
         
         if shouldScramble == true {
+            scatter()
             shouldScramble = false
         } else if shouldScramble == false {
+            gather()
             shouldScramble = true
         }
         
@@ -71,11 +73,12 @@ class ViewController: UIViewController {
             
             for label in self.labels {
                 var t = CGAffineTransform.identity
-                t = t.rotated(by: CGFloat.pi)
+                t = t.translatedBy(x: CGFloat.random(in: -self.view.bounds.maxX...self.view.bounds.maxX), y: (CGFloat.random(in: 0...self.view.bounds.maxY)))
                 t = t.scaledBy(x: 1.5, y: 1.5)
-                t = t.translatedBy(x: CGFloat.random(in: 0...self.view.frame.maxX), y: CGFloat.random(in: 0...self.view.frame.maxY))
+                t = t.rotated(by: CGFloat.pi)
                 label.transform = t
                 label.backgroundColor = UIColor(red: CGFloat.random(in: 0...255)/255, green: CGFloat.random(in: 0...255)/255, blue: CGFloat.random(in: 0...255)/255, alpha: 1)
+                label.textColor = UIColor(red: CGFloat.random(in: 0...255)/255, green: CGFloat.random(in: 0...255)/255, blue: CGFloat.random(in: 0...255)/255, alpha: 1)
             }
             
             self.lambdaLogoImageView.alpha = 0
@@ -87,13 +90,12 @@ class ViewController: UIViewController {
     func gather() {
         
         UIView.animate(withDuration: 2) {
-            
             for label in self.labels {
                 label.transform = CGAffineTransform.identity
+                label.backgroundColor = .white
+                label.textColor = .black
             }
-            
             self.lambdaLogoImageView.alpha = 1
-            
         }
         
     }
